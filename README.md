@@ -1,4 +1,4 @@
-# Full Guide: Installing Harbor with Built-in Trivy on Ubuntu 24.04 (HTTP Only)
+# Installing Harbor with Built-in Trivy on Ubuntu 24.04 (HTTP Only)
 
 ✅ **Trivy is automatically integrated**  
 ✅ **No need to set up Redis manually**  
