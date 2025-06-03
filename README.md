@@ -6,7 +6,7 @@
 
 ---
 
-## 🌐 Assumptions
+##  Assumptions
 
 - OS: Ubuntu 24.04 (clean or ready system)
 - Harbor will run over HTTP only (no TLS)
@@ -15,7 +15,7 @@
 
 ---
 
-## 🧱 Step 1: Update the System
+##  Step 1: Update the System
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -23,7 +23,7 @@ sudo apt update && sudo apt upgrade -y
 
 ---
 
-## 🐳 Step 2: Install Docker
+##  Step 2: Install Docker
 
 ```bash
 curl -s https://get.docker.com/ | sh
@@ -35,7 +35,7 @@ sudo usermod -aG docker $USER
 
 ---
 
-## 📦 Step 3: Download and Extract Harbor
+##  Step 3: Download and Extract Harbor
 
 ```bash
 cd /opt/
@@ -46,7 +46,7 @@ cd harbor
 
 ---
 
-## ⚙️ Step 4: Configure Harbor for HTTP
+## ⚙ Step 4: Configure Harbor for HTTP
 
 ```bash
 cp harbor.yml.tmpl harbor.yml
@@ -70,7 +70,7 @@ http:
 
 ---
 
-## 🚀 Step 5: Install Harbor with Trivy Support
+##  Step 5: Install Harbor with Trivy Support
 
 ⚠️ **This step is critical**: Install Harbor **with built-in Trivy**
 
@@ -87,7 +87,7 @@ This command:
 
 ---
 
-## ✅ Step 6: Verify Services
+##  Step 6: Verify Services
 
 ```bash
 docker ps
@@ -104,7 +104,7 @@ You should see containers like:
 
 ---
 
-## 🌍 Step 7: Access Harbor UI
+##  Step 7: Access Harbor UI
 
 Open your browser and go to:
 
@@ -121,7 +121,7 @@ Default login:
 
 ---
 
-## 🐋 Step 8: Configure Docker Daemon to Trust Harbor (Insecure Registry)
+##  Step 8: Configure Docker Daemon to Trust Harbor (Insecure Registry)
 
 ```bash
 sudo vim /etc/docker/daemon.json
@@ -143,7 +143,7 @@ sudo systemctl restart docker
 
 ---
 
-## 🧪 Step 9: Push a Test Image
+##  Step 9: Push a Test Image
 
 ```bash
 docker login 192.168.55.23
@@ -154,7 +154,7 @@ docker push 192.168.55.23/library/nginx:latest
 
 ---
 
-## 🛡️ Step 10: Test Trivy Integration (Scan + SBOM)
+## 🛡 Step 10: Test Trivy Integration (Scan + SBOM)
 
 1. In Harbor UI, go to any project.
 2. Click on an image (e.g. nginx).
