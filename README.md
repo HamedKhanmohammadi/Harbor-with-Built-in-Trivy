@@ -1,8 +1,9 @@
-# Installing Harbor with Built-in Trivy on Ubuntu 24.04 (HTTP Only)
+# Harbor with Built-in Trivy (HTTP Only)
 
 ✅ **Trivy is automatically integrated**  
 ✅ **No need to set up Redis manually**  
 ✅ **Simpler and cleaner than external setup**
+![HarborTrivy](https://github.com/user-attachments/assets/89141ad9-ce7a-4669-91b7-9fa11c901796)
 
 ---
 
@@ -46,7 +47,7 @@ cd harbor
 
 ---
 
-## ⚙ Step 4: Configure Harbor for HTTP
+##  Step 4: Configure Harbor for HTTP
 
 ```bash
 cp harbor.yml.tmpl harbor.yml
@@ -154,7 +155,7 @@ docker push 192.168.55.23/library/nginx:latest
 
 ---
 
-## 🛡 Step 10: Test Trivy Integration (Scan + SBOM)
+##  Step 10: Test Trivy Integration (Scan + SBOM)
 
 1. In Harbor UI, go to any project.
 2. Click on an image (e.g. nginx).
